@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "fd43d445-de63-4c27-8528-f6dff60b1ade",
+		"name": "java-kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26150575"
+	},
+	"item": [
+		{
+			"name": "producer",
+			"item": [
+				{
+					"name": "/api/v1/wikimedia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/wikimedia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"wikimedia"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/v1/messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "This is my third message to kafkas"
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/messages/json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"firstName\": \"first\",\n    \"lastName\": \"last\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/messages/json",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"messages",
+						"json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
